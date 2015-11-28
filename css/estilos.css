@@ -1,0 +1,16 @@
+.licenciaIDQ{
+		text-align: center;
+		
+}
+#tituloUP  { text-align: center; }
+
+td.tempmax {
+	color: #FF0130;
+	font-weight:bold;
+	text-align: center;
+}
+td.tempcold {
+		color: #022CFF;
+		font-weight:bold;
+		text-align: center;
+}
