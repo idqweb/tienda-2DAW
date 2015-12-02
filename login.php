@@ -84,7 +84,7 @@
 			   
 			   
 			   if($_SESSION['role'] == "usuario" ){
-					
+					// es conveniente curarse en salud por si el usuario quita cookies de su navegador
 				   header("Location:menu.php");
 			}
 			else{
