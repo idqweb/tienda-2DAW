@@ -51,7 +51,7 @@
 				 <!-------------- Fin Buscador -------------------------------------->
 				
 				<!-------------- Login -------------------------------------->	
-				<form class="navbar-form navbar-left" role="login" action="login.php" method="post">
+				<form class="navbar-form navbar-left" role="login" action="login.php?<?php echo htmlspecialchars(SID); ?>" method="post">
 					<label>Logeate:</label>
        				 <div class="form-group">
           				<input type="text" name="login" class="form-control" placeholder="Login..." size="10"/>

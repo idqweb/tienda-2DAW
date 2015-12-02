@@ -20,10 +20,15 @@
 		<!---------------- Control de Session ------------------->
 		<?php
 			session_start();
+
+			
+
+
 			// Comprobar que si estas aqui es es por Logearte OK sino te hecha al index
 			if (!isset($_SESSION['login']) || $_SESSION['logeado'] !=true){ 
 				header("Location: index.php");
 			}
+			
 		?>
 		
 		
@@ -54,7 +59,7 @@
 		<?php 
 				if ($_SESSION['role'] == "usuario"){
 		?>
-			<a href="compra.php">Compra</a><br/>
+			<a href="compra.php?"<?php echo session_name()."=".session_id() ?> >Compra</a><br/>
 			
 		
 		
@@ -64,8 +69,8 @@
 				elseif ($_SESSION['role'] == "administrador"){
 					
 		?>			
-			
-			<a href="altaarticulos.php">Alta Articulos</a><br/>
+			<?php echo $nombreSession."=".$idsession; ?>
+			<a href="altaarticulos.php?<?php echo $nombreSession."=".$idsession; ?>" >Alta Articulos</a><br/>
 			<a href="listadocompleto.php">Listado Completo</a><br/>
 			<a href="listadominimo.php">Listado Minimo</a><br/>
 			

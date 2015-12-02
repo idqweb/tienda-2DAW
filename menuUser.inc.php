@@ -22,7 +22,7 @@
 					
 					
 					<!-------------- Buscador -------------------------------------->	
-					<form class="navbar-form navbar-left" role="search" action="buscar.php" method="post" >
+					<form class="navbar-form navbar-left" role="search" action="buscar.php?<?php echo $nombreSession."=".$idsession; ?>" method="post" >
        				 <div class="form-group">
           				<input type="text" class="form-control" placeholder="Buscar" name="cadenaDeBusqueda"/>
         			</div>

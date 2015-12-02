@@ -1,7 +1,6 @@
 <?php
 	session_start();
-
-	
+		
 				
 		if (isset ($_POST['login']) && isset ($_POST['pass'])){
 			
@@ -79,17 +78,12 @@
 		}
 
 					
-			
+			#Si hay role es que se logeo correctamente y por lo tanto lo mando al menu.php (panel de contrl del usuario.
 			if(isset($_SESSION['role'])){
+					
 			   
-			   
-			   if($_SESSION['role'] == "usuario" ){
-					// es conveniente curarse en salud por si el usuario quita cookies de su navegador
-				   header("Location:menu.php");
-			}
-			else{
-				 header( "Location: menu.php" );
-			}
+					// por si el usuario quita cookies de su navegador
+				   header("Location:menu.php?".SID);
 			}
 		
 

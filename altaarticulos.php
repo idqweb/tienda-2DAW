@@ -24,6 +24,11 @@
 			if (!isset($_SESSION['login']) || $_SESSION['logeado'] !=true){ 
 				header("Location: index.php");
 			}
+			# Varianbles Identificadoras de la session, necessary for user delete cookies
+				$nombreSession = session_name();
+				$idsession = session_id();
+
+				
 		?>
 		
 		
@@ -46,7 +51,7 @@
 			
 		
 	<!----------------------- FORMULARIO INSERTAR PRODUCTOS  ----------------------------------------->	
-			
+			<?php echo $nombreSession."=".$idsession; ?>
 				<form class="form-horizontal" method="post" action="altaarticulos.php" enctype="multipart/form-data" >
 				  <fieldset>
 					<legend>Alta Producto</legend>
